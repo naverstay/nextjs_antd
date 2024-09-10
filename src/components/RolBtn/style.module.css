@@ -1,5 +1,5 @@
 .quickLinks {
-  @apply border-b w-[100%];
+  /* @apply border-b w-[100%]; */
   z-index: 51;
 }
 
@@ -9,15 +9,15 @@
 }
 
 .quickLinksWrapper {
-  @apply max-w-[1440px] mx-auto grid items-center py-[7px] text-[15px] px-16;
+  /* @apply max-w-[1440px] mx-auto grid items-center py-[7px] text-[15px] px-16; */
 }
 
 .sex {
-  @apply border-b border-dashed border-b-[1px];
+  /* @apply border-b border-dashed border-b-[1px]; */
 }
 
 .sexDark {
-  @apply border-b border-dashed border-b-[1px] border-white/10;
+  /* @apply border-b border-dashed border-b-[1px] border-white/10; */
 }
 
 .sex:hover {
@@ -25,7 +25,7 @@
 }
 
 .header {
-  @apply w-full sticky top-0 items-center border-b-[1px] border-solid border-primary-disabled bg-white;
+  /* @apply w-full sticky top-0 items-center border-b-[1px] border-solid border-primary-disabled bg-white; */
   z-index: 50;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .navLink {
-  @apply border-b cursor-pointer;
+  /* @apply border-b cursor-pointer; */
   border-bottom-width: 1px;
   line-height: 20px;
   font-weight: 500;
@@ -66,7 +66,7 @@
 }
 
 .mobileLink {
-  @apply font-primary;
+  /* @apply font-primary; */
   padding: 17px 24px;
   font-style: normal;
   font-weight: 400;
@@ -83,7 +83,7 @@
 }
 
 .userDropdown {
-  @apply border-none hidden lg:inline-flex;
+  /* @apply border-none hidden lg:inline-flex; */
 }
 
 .basketCount {

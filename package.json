@@ -9,10 +9,12 @@
     "icons": "svgr ./src/assets/icons_src --out-dir ./src/assets/icons",
     "lint": "next lint"
   },
+  "type": "module",
   "dependencies": {
     "@ant-design/cssinjs": "^1.21.1",
     "@ant-design/nextjs-registry": "^1.0.1",
     "antd": "^5.20.6",
+    "clsx": "^2.1.1",
     "next": "14.2.9",
     "react": "^18",
     "react-dom": "^18"

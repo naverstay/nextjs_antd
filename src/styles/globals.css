@@ -1,0 +1,141 @@
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+
+:root {
+  --font-primary: 'Inter', sans-serif;
+}
+
+body {
+  font: 400 16px/24px var(--font-primary);
+
+}
+
+img[height] {
+  height: initial !important;
+}
+
+.react-tooltip.react-tooltip__show {
+  opacity: 1 !important;
+}
+
+* {
+  /* @apply !scroll-smooth; */
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+*:disabled,
+.disabled {
+  cursor: not-allowed;
+}
+
+.brd {
+  border: 1px solid red;
+}
+
+.no-scrollBar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scrollBar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dark {
+  background-color: #0d0d0d;
+}
+
+.light {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Set the background color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #999; /* Set the color of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777; /* Set the color of the thumb on hover */
+}
+
+::placeholder {
+  /* @apply placeholder:text-text-placeholder; */
+}
+
+[data-base-hover='true'] {
+  transition: all 0.22s;
+  cursor: pointer;
+}
+
+[data-base-hover='true']:hover {
+  opacity: 0.5;
+}
+
+[data-base-hover='true']:active {
+  opacity: 0.7;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed !important;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+body::-moz-scrollbar,
+html::-moz-scrollbar {
+  width: 0px;
+  height: 0px;
+}
