@@ -7,13 +7,10 @@ import SvgSearch from "@/assets/icons/Search";
 import classes from './style.module.css'
 import SvgChevronDown from "@/assets/icons/ChevronDown";
 import {useMemo, useState} from "react";
+import {MenuPropsItems} from "@/types";
 
 interface MainHeaderProps {
   className?: string
-}
-
-interface Props extends MainHeaderProps {
-  onLinkClick?: () => void
 }
 
 const MainHeader = ({className}: MainHeaderProps) => {
@@ -21,7 +18,7 @@ const MainHeader = ({className}: MainHeaderProps) => {
   const [lang, setLang] = useState('1')
   const [menu, setMenu] = useState('1')
 
-  const currencyItems: MenuProps['items'] = [
+  const currencyItems: MenuPropsItems[] = [
     {
       label: 'RUB',
       key: '1',
@@ -32,7 +29,7 @@ const MainHeader = ({className}: MainHeaderProps) => {
     },
   ];
 
-  const menuItems: MenuProps['items'] = [
+  const menuItems: MenuPropsItems[] = [
     {
       label: 'Поддержка',
       key: '1',
@@ -43,7 +40,7 @@ const MainHeader = ({className}: MainHeaderProps) => {
     },
   ];
 
-  const langItems: MenuProps['items'] = [
+  const langItems: MenuPropsItems[] = [
     {
       label: 'Русский',
       key: '1',

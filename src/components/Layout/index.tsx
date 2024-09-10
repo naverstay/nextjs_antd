@@ -16,7 +16,7 @@ export default function Layout({children}: { children: ReactNode }) {
   return (
     <ConfigProvider theme={theme}>
       <Head>
-        <title>{{title: 'page title'}}</title>
+        <title>Page title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
         <meta name="description" content={'page description'}/>
       </Head>

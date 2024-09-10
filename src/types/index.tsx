@@ -3,3 +3,8 @@ export interface RobloxIem {
   count: number,
   active?: boolean
 }
+
+export interface MenuPropsItems {
+  label: string,
+  key: string
+}

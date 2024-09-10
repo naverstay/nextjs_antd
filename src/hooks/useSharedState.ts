@@ -1,6 +1,6 @@
 import useSWR from 'swr'
 
-export const useSharedState = (key: string, initial: any = undefined) => {
+export const useSharedState = (key: string, initial: never | undefined = undefined) => {
   const { data: state, mutate: setState } = useSWR(
     key,
     initial !== undefined

@@ -7,7 +7,7 @@ interface Props {
   isDark?: boolean
 }
 
-export const HelperLinks = ({isDark = false}: Props) => (
+export const HelperLinks = ({}: Props) => (
   <nav className={clsx(classes.primaryNavigationBlock, classes.id_help)}>
     <Link href="/about-us" scroll={false}>
       О бренде
@@ -21,7 +21,7 @@ export const HelperLinks = ({isDark = false}: Props) => (
   </nav>
 )
 
-export const OtherLinks = ({isDark = false}: Props) => (
+export const OtherLinks = ({}: Props) => (
   <nav
     className={clsx(classes.secondaryNavigationBlock, classes.id_links)}
     id="links"
