@@ -1,4 +1,5 @@
 import '@/fonts/Inter-4.0/web/inter.css'
+import '@/styles/_reset.css'
 import '@/styles/globals.css'
 import React from 'react';
 import {ConfigProvider} from 'antd';

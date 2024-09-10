@@ -6,10 +6,10 @@
     "dev": "next dev -p 3009",
     "build": "next build",
     "start": "next start",
-    "icons": "svgr ./src/assets/icons_src --out-dir ./src/assets/icons",
-    "lint": "next lint"
+    "icons": "svgr ./src/assets/icons_src",
+    "lint": "next lint",
+    "postinstall": "patch-package && npm run icons"
   },
-  "type": "module",
   "dependencies": {
     "@ant-design/cssinjs": "^1.21.1",
     "@ant-design/nextjs-registry": "^1.0.1",

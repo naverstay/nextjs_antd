@@ -8,7 +8,7 @@ export default function Container(
     ...rest
   }: PropsWithChildren<HTMLAttributes<HTMLDivElement>>) {
   return (
-    <div {...rest} className={clsx('max-w-[1160px] flex-1 min-h-full px-4 mx-auto w-full', className)}>
+    <div {...rest} className={clsx('container', className)}>
       {children}
     </div>
   )

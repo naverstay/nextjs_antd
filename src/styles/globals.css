@@ -1,13 +1,9 @@
-/*@tailwind base;*/
-/*@tailwind components;*/
-/*@tailwind utilities;*/
-
 :root {
   --font-primary: 'Inter', sans-serif;
 }
 
 body {
-  font: 400 16px/24px var(--font-primary);
+  font: 400 16px/24px Inter, sans-serif;
 
 }
 
@@ -30,10 +26,6 @@ img[height] {
   cursor: not-allowed;
 }
 
-.brd {
-  border: 1px solid red;
-}
-
 .no-scrollBar {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
@@ -48,14 +40,6 @@ img[height] {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.dark {
-  background-color: #0d0d0d;
-}
-
-.light {
-  background-color: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -138,4 +122,50 @@ body::-moz-scrollbar,
 html::-moz-scrollbar {
   width: 0px;
   height: 0px;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-family: Inter, sans-serif;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 2.5rem 3rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 1256px;
+  border: 1px solid #f1f3f4;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1160px;
+  min-height: 100%;
+  margin: 0 auto;
 }

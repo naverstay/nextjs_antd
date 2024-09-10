@@ -19,17 +19,10 @@ export default function Layout({children}: { children: ReactNode }) {
         <title>{{title: 'page title'}}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
         <meta name="description" content={'page description'}/>
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `history.scrollRestoration = "manual"`,
-          }}
-        />
       </Head>
-      <div className="min-h-[100vh] flex flex-col relative">
+      <div className="page">
         <Header/>
-        <main className="min-h-full flex items-center py-6 flex flex-col smooth-scroll mx-auto grow w-[100%]"
-              id="layout">
+        <main className="main">
           {children}
         </main>
         <Footer/>
