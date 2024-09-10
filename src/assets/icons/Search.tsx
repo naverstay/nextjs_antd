@@ -3,7 +3,7 @@ import type { SVGProps } from "react";
 const SvgSearch = (props: SVGProps<SVGSVGElement>) => (
   <svg width="1em" height="1em" fill="none" viewBox="0 0 16 16" {...props}>
     <path
-      stroke="currentColor"
+      stroke="#9A9BA3"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.333}

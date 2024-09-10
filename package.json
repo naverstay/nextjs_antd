@@ -6,6 +6,7 @@
     "dev": "next dev -p 3009",
     "build": "next build",
     "start": "next start",
+    "icons": "svgr ./src/assets/icons_src --out-dir ./src/assets/icons",
     "lint": "next lint"
   },
   "dependencies": {
@@ -17,11 +18,14 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@svgr/babel-plugin-replace-jsx-attribute-value": "8.0.0",
+    "@svgr/cli": "^8.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.9",
+    "patch-package": "^8.0.0",
     "typescript": "^5"
   }
 }
