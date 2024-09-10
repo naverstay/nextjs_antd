@@ -1,0 +1,20 @@
+.header {
+  @apply w-full sticky top-0 items-center border-b-[1px] border-solid border-primary-disabled bg-white;
+  z-index: 50;
+}
+
+.headerWrapper {
+  padding: .75rem 0;
+}
+
+.btnText {
+  font-weight: 500;
+  letter-spacing: .04em;
+  font-size: .875rem;
+  margin: 0 -2px;
+}
+
+.btnIcon {
+  font-size: 1rem;
+  margin-right: -.5rem;
+}

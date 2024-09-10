@@ -1,0 +1,59 @@
+diff --git a/node_modules/@svgr/babel-plugin-replace-jsx-attribute-value/dist/index.js b/node_modules/@svgr/babel-plugin-replace-jsx-attribute-value/dist/index.js
+index 6e104d6..cc7d831 100644
+--- a/node_modules/@svgr/babel-plugin-replace-jsx-attribute-value/dist/index.js
++++ b/node_modules/@svgr/babel-plugin-replace-jsx-attribute-value/dist/index.js
+@@ -1,6 +1,29 @@
+ 'use strict';
+ 
+ var core = require('@babel/core');
++const parseRegExp = (regExpString) => {
++  const regExpPattern = /^\/(.*?)\/([gimsuy]*)$/;
++  const match = regExpString.match(regExpPattern);
++
++  if (!match) {
++    return {
++      pattern: null,
++      flags: null,
++      regex: null
++    };
++  }
++
++  const pattern = match[1];
++  const flags = match[2];
++
++  const regex = new RegExp(pattern, flags);
++
++  return {
++    pattern,
++    flags,
++    regex
++  };
++};
+ 
+ const addJSXAttribute = (api, opts) => {
+   const getAttributeValue = (value, literal) => {
+@@ -27,6 +50,19 @@ const addJSXAttribute = (api, opts) => {
+         if (!valuePath.isStringLiteral())
+           return;
+         opts.values.forEach(({ value, newValue, literal }) => {
++          const replaceRx = parseRegExp(value);
++
++          if (replaceRx.regex !== null) {
++            const attributeName = path.node.name.name;
++            const attributeValue = path.node.value && path.node.value.value;
++
++            if (attributeValue && replaceRx.regex.test(attributeValue)) {
++              const v = attributeValue.replace(replaceRx.regex, newValue);
++              path.node.value = getAttributeValue(v, literal);
++            }
++
++            return;
++          }
+           if (!valuePath.isStringLiteral({ value }))
+             return;
+           const attributeValue = getAttributeValue(newValue, literal);
+@@ -40,4 +76,3 @@ const addJSXAttribute = (api, opts) => {
+ };
+ 
+ module.exports = addJSXAttribute;
+-//# sourceMappingURL=index.js.map
