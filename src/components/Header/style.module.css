@@ -12,6 +12,36 @@
   padding: .75rem 0;
 }
 
+.headerLogo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.headerNav {
+  display: flex;
+  flex: 1 1 0;
+  gap: 0.25rem;
+  justify-content: flex-end;
+}
+
+.headerNavBtn {
+  margin-left: 0.25rem;
+}
+
+.headerSearch {
+  width: 384px;
+  margin-right: auto;
+}
+
+.headerSearchIcon {
+  display: flex;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  padding-right: 0.5rem;
+  color: rgb(154 155 163);
+}
+
 .btnText {
   font-weight: 500;
   letter-spacing: .04em;

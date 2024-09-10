@@ -93,25 +93,25 @@ const MainHeader = ({className}: MainHeaderProps) => {
   return (
     <header className={clsx(classes.header, className)}>
       <Container>
-        <Flex gap="50px" justify={"space-between"} className={classes.headerWrapper}>
-          <Link href={'/'} className={"flex items-center cursor-pointer"}>
+        <Flex gap="50px" justify={"space-between"} align={"center"} className={classes.headerWrapper}>
+          <Link href={'/'} className={classes.headerLogo}>
             <Image
               src={'/logo.svg'}
-              width="0"
-              height="0"
+              width="118"
+              height="24"
               alt="brand logo"
-              className="flex-shrink-0 w-[118px]"
               priority
               sizes="100vw"
             />
           </Link>
 
-          <Input size="middle"
-                 rootClassName={"w-[384px]"}
-                 placeholder="Поиск игр и приложений..."
-                 prefix={<span className={"text-lg text-text-icon pr-2"}><SvgSearch/></span>}/>
+          <div className={classes.headerSearch}>
+            <Input size="middle"
+                   placeholder="Поиск игр и приложений..."
+                   prefix={<span className={classes.headerSearchIcon}><SvgSearch/></span>}/>
+          </div>
 
-          <nav className="flex justify-end gap-1 flex-1">
+          <nav className={classes.headerNav}>
             <Dropdown menu={helpMenuProps}>
               <Button type={"text"}>
                 <span className={classes.btnText}>{activeMenu}</span>
@@ -131,10 +131,10 @@ const MainHeader = ({className}: MainHeaderProps) => {
               </Button>
             </Dropdown>
 
-            <Button className={"ml-1"}>
+            <Button className={classes.headerNavBtn}>
               <span className={classes.btnText}>Вход</span>
             </Button>
-            <Button className={"ml-1"} type="primary">
+            <Button className={classes.headerNavBtn} type="primary">
               <span className={classes.btnText}>Регистрация</span>
             </Button>
           </nav>
